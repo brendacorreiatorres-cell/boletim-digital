@@ -14,6 +14,8 @@
   --texto: #2c2c2c;
   --texto-claro: #6b6b6b;
   --branco: #ffffff;
+  --erro: #c0392b;
+  --sucesso: #1f8a4c;
 }
 
 /* ===== CORPO ===== */
@@ -52,133 +54,31 @@ body {
   padding: 24px 16px 40px;
 }
 
-/* ===== CARDS DE RESUMO ===== */
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 16px;
-  margin-bottom: 32px;
+/* ===== ÁREA DE ACESSO (LOGIN) ===== */
+.area-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0 30px;
 }
 
-.card {
+.card-login {
   background-color: var(--branco);
   border-radius: 16px;
-  padding: 18px;
-  box-shadow: 0 4px 12px rgba(106, 63, 181, 0.15);
-  border: 1px solid var(--lilas-borda);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 18px rgba(106, 63, 181, 0.25);
-}
-
-.card-titulo {
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  color: var(--roxo);
-  font-weight: bold;
-  margin-bottom: 8px;
-}
-
-.card-valor {
-  font-size: 1.6rem;
-  font-weight: bold;
-  color: var(--texto);
-}
-
-.card-extra {
-  font-size: 0.85rem;
-  color: var(--texto-claro);
-  margin-top: 4px;
-}
-
-/* ===== ÁREA DA TABELA ===== */
-.tabela-area h2 {
-  color: var(--roxo);
-  margin-bottom: 12px;
-  font-size: 1.3rem;
-}
-
-.tabela-responsiva {
-  overflow-x: auto; /* permite rolar de lado no celular */
-  background-color: var(--branco);
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(106, 63, 181, 0.15);
-  border: 1px solid var(--lilas-borda);
-}
-
-table {
+  padding: 24px;
+  max-width: 360px;
   width: 100%;
-  border-collapse: collapse;
-  min-width: 640px; /* força rolagem em telas muito pequenas */
-}
-
-thead {
-  background-color: var(--roxo);
-  color: var(--branco);
-}
-
-th, td {
-  padding: 12px 14px;
+  box-shadow: 0 4px 12px rgba(106, 63, 181, 0.15);
+  border: 1px solid var(--lilas-borda);
   text-align: center;
-  font-size: 0.92rem;
 }
 
-th:first-child, td:first-child {
-  text-align: left; /* nome da disciplina alinhado à esquerda */
+.card-login h2 {
+  color: var(--roxo);
+  font-size: 1.3rem;
+  margin-bottom: 16px;
 }
 
-tbody tr {
-  border-bottom: 1px solid var(--lilas-borda);
-}
-
-tbody tr:nth-child(even) {
-  background-color: #faf7ff;
-}
-
-tbody tr:last-child {
-  border-bottom: none;
-}
-
-/* ===== SITUAÇÕES ===== */
-.situacao-bom {
-  color: #1f8a4c;
-  font-weight: bold;
-}
-
-.situacao-atencao {
-  color: #c0392b;
-  font-weight: bold;
-}
-
-.situacao-indisponivel {
-  color: var(--texto-claro);
-  font-style: italic;
-}
-
-/* ===== RODAPÉ ===== */
-.rodape {
-  text-align: center;
-  padding: 20px;
-  font-size: 0.85rem;
-  color: var(--texto-claro);
-}
-
-/* ===== AJUSTES PARA CELULAR ===== */
-@media (max-width: 600px) {
-  .cabecalho h1 {
-    font-size: 1.5rem;
-  }
-
-  .card-valor {
-    font-size: 1.3rem;
-  }
-
-  th, td {
-    padding: 10px;
-    font-size: 0.85rem;
-  }
-}
+.info-estudante {
+  background-color: var(--lilas);
+  border-radius: 1

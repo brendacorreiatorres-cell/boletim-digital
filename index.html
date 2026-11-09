@@ -12,40 +12,73 @@
   <!-- CABEÇALHO -->
   <header class="cabecalho">
     <h1>Boletim Digital</h1>
-    <p class="subtitulo">8º Ano — Estudante Exemplo</p>
+    <p class="subtitulo">8º Ano B — Chamada nº 06</p>
   </header>
 
   <main class="conteudo">
 
-    <!-- ÁREA DOS CARDS DE RESUMO -->
-    <section class="cards" id="cards">
-      <!-- Os cards serão criados pelo JavaScript -->
-    </section>
-
-    <!-- ÁREA DA TABELA -->
-    <section class="tabela-area">
-      <h2>Notas por Disciplina</h2>
-
-      <!-- Tabela responsiva -->
-      <div class="tabela-responsiva">
-        <table>
-          <thead>
-            <tr>
-              <th>Disciplina</th>
-              <th>1º Tri</th>
-              <th>2º Tri</th>
-              <th>3º Tri</th>
-              <th>Média</th>
-              <th>Faltas</th>
-              <th>Situação</th>
-            </tr>
-          </thead>
-          <tbody id="corpo-tabela">
-            <!-- As linhas serão criadas pelo JavaScript -->
-          </tbody>
-        </table>
+    <!-- ÁREA DE ACESSO POR PIN -->
+    <section class="area-login" id="area-login">
+      <div class="card-login">
+        <h2>Acesso ao Boletim</h2>
+        <div class="info-estudante">
+          <p><strong>Série:</strong> 8º Ano</p>
+          <p><strong>Turma:</strong> 8B</p>
+          <p><strong>Chamada:</strong> 06</p>
+        </div>
+        <form id="form-login" onsubmit="return false;">
+          <div class="campo-grupo">
+            <label for="campo-pin">Digite seu PIN:</label>
+            <input type="password" id="campo-pin" placeholder="PIN" autocomplete="off" required />
+          </div>
+          <button type="submit" id="btn-entrar">Entrar</button>
+        </form>
+        <p class="mensagem-status" id="msg-login"></p>
       </div>
     </section>
+
+    <!-- ÁREA DO BOLETIM (ESCONDIDA ATÉ O LOGIN) -->
+    <div id="area-boletim" style="display: none;">
+
+      <!-- BARRA DE AÇÕES DA SESSÃO -->
+      <section class="barra-acoes">
+        <button type="button" id="btn-alterar" class="btn-acao">Alterar dados</button>
+        <button type="button" id="btn-salvar" class="btn-acao btn-salvar" style="display: none;">Salvar alterações</button>
+        <button type="button" id="btn-cancelar" class="btn-acao btn-cancelar" style="display: none;">Cancelar</button>
+        <span class="mensagem-status" id="msg-boletim"></span>
+      </section>
+
+      <!-- ÁREA DOS CARDS DE RESUMO -->
+      <section class="cards" id="cards">
+        <!-- Os cards serão criados pelo JavaScript -->
+      </section>
+
+      <!-- ÁREA DA TABELA -->
+      <section class="tabela-area">
+        <h2>Notas por Disciplina</h2>
+
+        <!-- Tabela responsiva -->
+        <div class="tabela-responsiva">
+          <table>
+            <thead>
+              <tr id="cabecalho-tabela">
+                <th>Disciplina</th>
+                <th>1º Tri</th>
+                <th>2º Tri</th>
+                <th>3º Tri</th>
+                <th>Média</th>
+                <th>Faltas</th>
+                <th>Situação</th>
+              </tr>
+            </thead>
+            <tbody id="corpo-tabela">
+              <!-- As linhas serão criadas pelo JavaScript -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+    </div>
 
   </main>
 
